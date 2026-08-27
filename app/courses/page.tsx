@@ -78,7 +78,7 @@ export default function CoursesPage() {
       {/* Heading */}
       <div className="mx-auto mb-14 max-w-3xl text-center">
 
-        <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-600">
+        <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800">
           OUR COURSES
         </span>
 

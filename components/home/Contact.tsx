@@ -21,7 +21,7 @@ const Contact = () => {
             <p>📍 Dwarka, New Delhi</p>
           </div>
   
-          <button className="mt-10 rounded-xl bg-white px-8 py-4 font-semibold text-blue-600 transition hover:scale-105">
+          <button className="mt-10 rounded-xl bg-white px-8 py-4 font-semibold text-blue-700 transition hover:scale-105">
             Get Free Career Guidance
           </button>
   

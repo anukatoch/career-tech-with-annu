@@ -21,14 +21,14 @@ const ProjectCard = ({
         {technologies.map((tech) => (
           <span
             key={tech}
-            className="rounded-md bg-blue-50 px-3 py-1 text-sm text-blue-600"
+            className="rounded-md bg-blue-50 px-3 py-1 text-sm text-blue-700"
           >
             {tech}
           </span>
         ))}
       </div>
 
-      <button className="mt-6 rounded-lg border border-blue-600 px-5 py-2 text-blue-600 transition hover:bg-blue-600 hover:text-white">
+      <button className="mt-6 rounded-lg border border-blue-600 px-5 py-2 text-blue-700 transition hover:bg-blue-600 hover:text-white">
         View Project
       </button>
     </div>

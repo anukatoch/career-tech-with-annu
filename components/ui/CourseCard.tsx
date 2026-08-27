@@ -16,7 +16,7 @@ const CourseCard = ({
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
 
-      <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-600">
+      <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-700">
         {badge}
       </span>
 

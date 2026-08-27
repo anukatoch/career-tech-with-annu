@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
         {/* Heading */}
 
         <div className="mb-16 text-center">
-          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-600 ">
+          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-800 ">
             WHY CHOOSE US
           </span>
 

@@ -6,7 +6,7 @@ export default function CoursePricing({ price, included }) {
       <div className="mx-auto max-w-4xl rounded-3xl border border-blue-100 bg-white p-8 text-center shadow-lg md:p-12">
 
         {/* Label */}
-        <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-600">
+        <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
           START YOUR JOURNEY
         </span>
 

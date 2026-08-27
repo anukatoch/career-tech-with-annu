@@ -4,7 +4,7 @@ const MissionVision = () => {
       <div className="mx-auto max-w-6xl px-6">
 
         <div className="mb-12 text-center">
-          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-600">
+          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
             OUR PURPOSE
           </span>
 

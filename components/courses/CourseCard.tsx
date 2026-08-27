@@ -55,7 +55,7 @@ export default function CourseCard({
         {courseSkills.map((skill) => (
           <span
             key={skill}
-            className="rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-600"
+            className="rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-800"
           >
             {skill}
           </span>

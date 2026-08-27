@@ -14,7 +14,7 @@ export default function CourseModules({
   return (
     <section className="mt-12">
       <div className="mb-8">
-        <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-600">
+        <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800">
           COURSE SYLLABUS
         </span>
 

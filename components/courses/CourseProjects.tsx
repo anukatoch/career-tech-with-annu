@@ -14,7 +14,7 @@ export default function CourseProjects({
     <section className="mt-16">
       {/* Heading */}
       <div className="mb-8">
-        <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-600">
+        <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
           REAL-WORLD PROJECTS
         </span>
 
@@ -46,7 +46,7 @@ export default function CourseProjects({
               {project.description}
             </p>
 
-            <div className="mt-5 font-semibold text-blue-600">
+            <div className="mt-5 font-semibold text-blue-700">
               Build Project →
             </div>
           </div>

@@ -94,7 +94,7 @@ const Navbar = () => {
             <Link
               href="/"
               onClick={() => setMenuOpen(false)}
-              className="hover:text-blue-600"
+              className="hover:text-blue-700"
             >
               Home
             </Link>
@@ -102,7 +102,7 @@ const Navbar = () => {
             <Link
               href="/about"
               onClick={() => setMenuOpen(false)}
-              className="hover:text-blue-600"
+              className="hover:text-blue-700"
             >
               About
             </Link>
@@ -110,7 +110,7 @@ const Navbar = () => {
             <Link
               href="/courses"
               onClick={() => setMenuOpen(false)}
-              className="hover:text-blue-600"
+              className="hover:text-blue-700"
             >
               Courses
             </Link>
@@ -118,7 +118,7 @@ const Navbar = () => {
             <Link
   href="/contact"
   onClick={() => setMenuOpen(false)}
-  className="text-slate-700 hover:text-blue-600"
+  className="text-slate-700 hover:text-blue-700"
 >
   Contact
 </Link>

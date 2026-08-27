@@ -17,7 +17,7 @@ export default function AboutCTA() {
         </p>
 
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <button className="rounded-lg bg-white px-7 py-3 font-semibold text-blue-600 transition hover:bg-blue-50">
+          <button className="rounded-lg bg-white px-7 py-3 font-semibold text-blue-700 transition hover:bg-blue-50">
             Explore Courses
           </button>
 
