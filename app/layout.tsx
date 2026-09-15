@@ -1,7 +1,27 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
+import { Poppins, Inter, JetBrains_Mono } from "next/font/google";
+
 import "./globals.css";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-code",
+  weight: ["400", "500", "600"],
+});
 
 export const metadata = {
   title: "Career Tech | Full Stack, UI/UX & AI Courses",
@@ -16,12 +36,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body
+        className={`${poppins.variable} ${inter.variable} ${jetbrains.variable}`}
+      >
         <Navbar />
 
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
 
         <Footer />
       </body>

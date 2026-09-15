@@ -11,6 +11,50 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+/* ================================
+   Career Tech Typography System
+   ================================ */
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-poppins), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Main headings */
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Code */
+code,
+pre {
+  font-family: var(--font-code), monospace;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -23,4 +67,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.sidebar-scroll {
+  scrollbar-width: thin;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
