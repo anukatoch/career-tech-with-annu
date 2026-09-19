@@ -346,7 +346,7 @@ export default function JsSidebar({
             SCROLLABLE COURSE CONTENT
         =================================================== */}
 
-    <div className="sidebar-scroll overflow-y-auto">
+    <div className="sidebar-scroll">
 
           <div className="bg-white px-3 pb-5 pt-5">
 
