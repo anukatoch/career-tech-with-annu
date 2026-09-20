@@ -11,7 +11,6 @@ const categories = [
   "MongoDB",
   "AI",
 ];
-
 const masterclasses = [
   {
     category: "JavaScript",
@@ -23,6 +22,7 @@ const masterclasses = [
     link: "/blog/javascript",
     icon: "JS",
   },
+
   {
     category: "React",
     title: "React Masterclass",
@@ -32,6 +32,17 @@ const masterclasses = [
     projects: "3+ Projects",
     link: "/blog/react",
     icon: "⚛",
+  },
+
+  {
+    category: "Node.js",
+    title: "Node.js Masterclass",
+    description:
+      "Learn Node.js step-by-step with Express.js, REST APIs, MongoDB, authentication, backend projects and interview preparation.",
+    topics: "70+ Topics",
+    projects: "4+ Projects",
+    link: "/blog/node",
+    icon: "Node",
   },
 ];
 
@@ -75,10 +86,9 @@ export default function BlogPage() {
         activeCategory === "All" || course.category === activeCategory;
 
       const searchText = search.toLowerCase();
-
-      const matchesSearch =
-        course.title.toLowerCase().includes(searchText) ||
-        course.description.toLowerCase().includes(searchText);
+const matchesSearch =
+  (course.title ?? "").toLowerCase().includes(searchText) ||
+  course.description.toLowerCase().includes(searchText);
 
       return matchesCategory && matchesSearch;
     });
