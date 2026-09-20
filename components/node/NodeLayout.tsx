@@ -216,11 +216,11 @@ export default function NodeLayout() {
 
               {/* Topic Description */}
 
-              {activeTopicData?.description && (
-                <p className="mt-5 max-w-4xl text-lg leading-8 text-slate-600 sm:text-xl">
-                  {activeTopicData.description}
-                </p>
-              )}
+             {content?.concept?.paragraphs?.[0] && (
+  <p className="mt-5 max-w-4xl text-lg leading-8 text-slate-600 sm:text-xl">
+    {content.concept.paragraphs[0]}
+  </p>
+)}
 
               {/* Learning Tags */}
 
