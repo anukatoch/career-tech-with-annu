@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-
 const categories = [
   "All",
   "JavaScript",
   "React",
   "Node.js",
+  "Express.js",
   "MongoDB",
   "AI",
 ];
@@ -44,6 +44,16 @@ const masterclasses = [
     link: "/blog/node",
     icon: "Node",
   },
+  {
+  category: "Express.js",
+  title: "Express.js Masterclass",
+  description:
+    "Learn Express.js step-by-step with routing, middleware, REST APIs, MongoDB, authentication, security, projects and interview preparation.",
+  topics: "60+ Topics",
+  projects: "4+ Projects",
+  link: "/blog/express",
+  icon: "Ex",
+},
 ];
 
 const tutorials = [
