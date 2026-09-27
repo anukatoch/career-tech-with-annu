@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+
 const categories = [
   "All",
   "JavaScript",
@@ -11,6 +12,7 @@ const categories = [
   "MongoDB",
   "AI",
 ];
+
 const masterclasses = [
   {
     category: "JavaScript",
@@ -22,18 +24,16 @@ const masterclasses = [
     link: "/blog/javascript",
     icon: "JS",
   },
-
   {
     category: "React",
     title: "React Masterclass",
     description:
-      "Learn React from the basics to hooks, components, API integration, CRUD applications, projects and interview preparation.",
+      "Learn React from the basics to hooks, API integration, CRUD applications, projects and interview preparation.",
     topics: "40+ Topics",
     projects: "3+ Projects",
     link: "/blog/react",
     icon: "⚛",
   },
-
   {
     category: "Node.js",
     title: "Node.js Masterclass",
@@ -45,15 +45,25 @@ const masterclasses = [
     icon: "Node",
   },
   {
-  category: "Express.js",
-  title: "Express.js Masterclass",
-  description:
-    "Learn Express.js step-by-step with routing, middleware, REST APIs, MongoDB, authentication, security, projects and interview preparation.",
-  topics: "60+ Topics",
-  projects: "4+ Projects",
-  link: "/blog/express",
-  icon: "Ex",
-},
+    category: "Express.js",
+    title: "Express.js Masterclass",
+    description:
+      "Learn Express.js with routing, middleware, REST APIs, MongoDB, authentication, security and backend projects.",
+    topics: "40+ Topics",
+    projects: "4+ Projects",
+    link: "/blog/express",
+    icon: "EX",
+  },
+  {
+    category: "MongoDB",
+    title: "MongoDB Masterclass",
+    description:
+      "Learn MongoDB step-by-step with documents, collections, CRUD, queries, aggregation, indexes, Mongoose and real-world projects.",
+    topics: "59 Topics",
+    projects: "4 Projects",
+    link: "/blog/mongodb",
+    icon: "DB",
+  },
 ];
 
 const tutorials = [
@@ -96,9 +106,10 @@ export default function BlogPage() {
         activeCategory === "All" || course.category === activeCategory;
 
       const searchText = search.toLowerCase();
-const matchesSearch =
-  (course.title ?? "").toLowerCase().includes(searchText) ||
-  course.description.toLowerCase().includes(searchText);
+
+      const matchesSearch =
+        course.title.toLowerCase().includes(searchText) ||
+        course.description.toLowerCase().includes(searchText);
 
       return matchesCategory && matchesSearch;
     });
@@ -134,9 +145,11 @@ const matchesSearch =
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero */}
+
+      {/* HERO */}
       <section className="mx-auto max-w-7xl px-6 pb-12 pt-16 md:px-8">
         <div className="max-w-3xl">
+
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">
             Career Tech with Annu
           </p>
@@ -149,9 +162,10 @@ const matchesSearch =
             Practical coding tutorials, structured learning paths, real-world
             projects, interview preparation and developer challenges.
           </p>
+
         </div>
 
-        {/* Search */}
+        {/* SEARCH */}
         <div className="mt-10 max-w-2xl">
           <input
             type="text"
@@ -162,8 +176,9 @@ const matchesSearch =
           />
         </div>
 
-        {/* Categories */}
+        {/* CATEGORIES */}
         <div className="mt-6 flex flex-wrap gap-3">
+
           {categories.map((category) => (
             <button
               key={category}
@@ -178,17 +193,20 @@ const matchesSearch =
               {category}
             </button>
           ))}
+
         </div>
       </section>
 
-      {/* Learning Content */}
+      {/* LEARNING CONTENT */}
       <section
         id="learning-content"
         className="scroll-mt-8 bg-slate-50 py-16"
       >
         <div className="mx-auto max-w-7xl px-6 md:px-8">
-          {/* Section Heading */}
+
+          {/* HEADING */}
           <div className="mb-10">
+
             <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
               Structured Learning
             </p>
@@ -204,19 +222,24 @@ const matchesSearch =
                 ? "Follow complete learning paths instead of learning random topics. Each masterclass is organized step-by-step for practical development."
                 : `Explore structured ${activeCategory} learning resources with practical examples and projects.`}
             </p>
+
           </div>
 
-          {/* Masterclasses */}
+          {/* MASTERCLASSES */}
           {filteredMasterclasses.length > 0 && (
             <div className="grid gap-8 md:grid-cols-2">
+
               {filteredMasterclasses.map((course) => (
                 <article
                   key={course.title}
                   className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
                 >
-                  {/* Card Header */}
+
+                  {/* CARD HEADER */}
                   <div className="bg-gradient-to-br from-slate-950 via-blue-950 to-blue-800 p-8 text-white">
+
                     <div className="flex items-start justify-between">
+
                       <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-xl font-bold backdrop-blur-sm">
                         {course.icon}
                       </div>
@@ -224,6 +247,7 @@ const matchesSearch =
                       <span className="rounded-full bg-white/10 px-4 py-2 text-sm font-medium">
                         {course.category}
                       </span>
+
                     </div>
 
                     <h3 className="mt-8 text-3xl font-bold">
@@ -233,11 +257,14 @@ const matchesSearch =
                     <p className="mt-4 leading-7 text-blue-100">
                       {course.description}
                     </p>
+
                   </div>
 
-                  {/* Card Body */}
+                  {/* CARD BODY */}
                   <div className="p-8">
+
                     <div className="grid grid-cols-2 gap-4">
+
                       <div className="rounded-2xl bg-slate-50 p-4">
                         <p className="text-2xl font-bold text-slate-900">
                           {course.topics}
@@ -257,6 +284,7 @@ const matchesSearch =
                           Practical Projects
                         </p>
                       </div>
+
                     </div>
 
                     <Link
@@ -264,20 +292,25 @@ const matchesSearch =
                       className="mt-7 flex items-center justify-center rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white transition hover:bg-blue-700"
                     >
                       Start Learning
+
                       <span className="ml-2 transition-transform group-hover:translate-x-1">
                         →
                       </span>
                     </Link>
+
                   </div>
+
                 </article>
               ))}
+
             </div>
           )}
 
-          {/* No Masterclass */}
+          {/* NO CONTENT */}
           {filteredMasterclasses.length === 0 &&
             filteredTutorials.length === 0 && (
               <div className="rounded-2xl border border-gray-200 bg-white p-10 text-center">
+
                 <h3 className="text-xl font-semibold text-gray-900">
                   No learning content found
                 </h3>
@@ -285,16 +318,21 @@ const matchesSearch =
                 <p className="mt-2 text-gray-600">
                   Try another category or search term.
                 </p>
+
               </div>
             )}
+
         </div>
       </section>
 
-      {/* Quick Tutorials */}
+      {/* QUICK TUTORIALS */}
       {filteredTutorials.length > 0 && (
         <section className="mx-auto max-w-7xl px-6 py-20 md:px-8">
+
           <div className="mb-8 flex items-end justify-between">
+
             <div>
+
               <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
                 Quick Tutorials
               </p>
@@ -306,20 +344,25 @@ const matchesSearch =
               <p className="mt-2 text-gray-600">
                 Learn individual concepts with practical examples.
               </p>
+
             </div>
 
             <span className="hidden text-sm text-gray-500 sm:block">
               {filteredTutorials.length} Tutorials
             </span>
+
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
             {filteredTutorials.map((tutorial) => (
               <article
                 key={tutorial.title}
                 className="group rounded-2xl border border-gray-200 bg-white p-6 transition duration-200 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
               >
+
                 <div className="flex items-center justify-between">
+
                   <span className="text-sm font-semibold text-blue-600">
                     {tutorial.category}
                   </span>
@@ -327,6 +370,7 @@ const matchesSearch =
                   <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
                     {tutorial.level}
                   </span>
+
                 </div>
 
                 <h3 className="mt-5 text-xl font-bold text-gray-900 group-hover:text-blue-600">
@@ -338,11 +382,15 @@ const matchesSearch =
                 </p>
 
                 <div className="mt-6 flex items-center justify-between border-t border-gray-100 pt-5 text-sm">
-                  <span className="text-gray-500">{tutorial.time}</span>
+
+                  <span className="text-gray-500">
+                    {tutorial.time}
+                  </span>
 
                   <span className="font-medium text-gray-700">
                     🎯 Interview Ready
                   </span>
+
                 </div>
 
                 <Link
@@ -351,11 +399,15 @@ const matchesSearch =
                 >
                   Read Tutorial →
                 </Link>
+
               </article>
             ))}
+
           </div>
+
         </section>
       )}
+
     </main>
   );
 }
