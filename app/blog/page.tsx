@@ -64,6 +64,16 @@ const masterclasses = [
     link: "/blog/mongodb",
     icon: "DB",
   },
+    {
+    category: "AI",
+    title: "AI & Gen AI Masterclass",
+    description:
+      "Learn AI and Generative AI step-by-step with AI fundamentals, LLMs, prompt engineering, AI APIs, chatbot integration and practical projects.",
+    topics: "AI Topics",
+    projects: "Practical Projects",
+    link: "/blog/ai",
+    icon: "AI",
+  },
 ];
 
 const tutorials = [
