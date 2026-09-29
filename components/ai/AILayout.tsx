@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 import AISidebar from "@/components/ai/AISidebar";
@@ -8,6 +8,14 @@ import { aiSections } from "@/data/ai/topics";
 import { aiTopicContent } from "@/data/ai/topicContent";
 
 export default function AILayout() {
+  return (
+    <Suspense fallback={<AILoading />}>
+      <AILayoutContent />
+    </Suspense>
+  );
+}
+
+function AILayoutContent() {
   const searchParams = useSearchParams();
 
   const allTopics = useMemo(
@@ -62,7 +70,12 @@ export default function AILayout() {
 
     const url = new URL(window.location.href);
     url.searchParams.set("topic", topicId);
-    window.history.replaceState({}, "", url.toString());
+
+    window.history.replaceState(
+      {},
+      "",
+      url.toString()
+    );
 
     window.scrollTo({
       top: 0,
@@ -687,6 +700,32 @@ export default function AILayout() {
 
       </div>
 
+    </main>
+  );
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+function AILoading() {
+  return (
+    <main className="min-h-screen bg-slate-50">
+      <div className="mx-auto flex min-h-screen items-center justify-center px-6">
+
+        <div className="rounded-2xl border border-slate-200 bg-white px-8 py-6 text-center shadow-sm">
+
+          <p className="text-lg font-black text-slate-900">
+            Loading AI Masterclass...
+          </p>
+
+          <p className="mt-2 text-sm text-slate-500">
+            Please wait...
+          </p>
+
+        </div>
+
+      </div>
     </main>
   );
 }

@@ -15,7 +15,7 @@ const categories = [
 
 const masterclasses = [
   {
-    category: "JavaScript",
+    category: "npm run buildJavaScript",
     title: "JavaScript Masterclass",
     description:
       "Learn JavaScript step-by-step from fundamentals to advanced concepts, practical coding, challenges and interview preparation.",
