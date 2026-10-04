@@ -8,9 +8,12 @@ const categories = [
   "JavaScript",
   "React",
   "Node.js",
+  "Next.js",
+
   "Express.js",
   "MongoDB",
   "AI",
+  
 ];
 
 const masterclasses = [
@@ -44,6 +47,16 @@ const masterclasses = [
     link: "/blog/node",
     icon: "Node",
   },
+  {
+  category: "Next.js",
+  title: "Next.js Masterclass",
+  description:
+    "Learn Next.js step-by-step with App Router, routing, Server Components, data fetching, APIs, authentication, MongoDB and deployment.",
+  topics: "49 Topics",
+  projects: "5+ Projects",
+  link: "/blog/nextjs",
+  icon: "N",
+},
   {
     category: "Express.js",
     title: "Express.js Masterclass",
@@ -104,6 +117,16 @@ const tutorials = [
     time: "12 min read",
     link: "/blog/javascript",
   },
+  {
+  category: "Next.js",
+  title: "Next.js Masterclass",
+  description:
+    "Learn Next.js step-by-step with App Router, routing, layouts, Server Components, Client Components, data fetching, APIs, authentication, MongoDB, AI integration and deployment.",
+  topics: "50+ Topics",
+  projects: "4+ Projects",
+  link: "/blog/nextjs",
+  icon: "NX",
+},
 ];
 
 export default function BlogPage() {
